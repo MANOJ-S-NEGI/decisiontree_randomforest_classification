@@ -86,6 +86,9 @@ for estimate in range(1,30,1):
 2. Soft Voting:
 - In soft voting, each base estimator predicts the probability distribution over all the classes. The final prediction is determined by averaging these probabilities and then selecting the class with the highest average probability.
 - The final prediction is then determined by averaging these probabilities across all the base estimators and selecting the class with the highest average probability.
+![votting](https://github.com/MANOJ-S-NEGI/decisiontree_randomforest_classification/assets/99602627/fd624581-13b1-451c-bcd9-898b3c6dea81)
+
+
 
 ```
 ## importing algorithms
