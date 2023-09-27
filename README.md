@@ -81,12 +81,14 @@ for estimate in range(1,30,1):
 
 **1. Hard Voting:**
 - In hard voting, each base estimator (model) predicts the class label, and the final prediction is determined by a majority vote. The class label with the most votes becomes the final prediction.
+- In the context of classification, the class that receives the most votes is chosen as the final predicted class label.
 
 2. Soft Voting:
 - In soft voting, each base estimator predicts the probability distribution over all the classes. The final prediction is determined by averaging these probabilities and then selecting the class with the highest average probability.
+- The final prediction is then determined by averaging these probabilities across all the base estimators and selecting the class with the highest average probability.
 
 ```
-  ## importing algos
+## importing algorithms
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import BaggingClassifier
 from sklearn.ensemble import RandomForestClassifier, VotingClassifier
@@ -112,7 +114,7 @@ parameters_DT = {
             'splitter': 'best'
             }
             
-# Define multiple base learners (Decision Tree,Random Forest)
+# Define multiple base learners (Decision Tree, Random Forest)
 base_learners = [
                 ('Decision Tree', DecisionTreeClassifier(**parameters_DT)),
                 ('Random Forest', RandomForestClassifier(**parameters_RF)),
